@@ -1,34 +1,45 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Menubar } from "primereact/menubar";
+// import { Link } from "react-router-dom";
 
 function Navbar() {
+
+  const [modoOscuro, setModoOscuro] = useState(false);
+
+  const toggleModo = () => {
+    setModoOscuro(!modoOscuro);
+  };
+
+  const items = [
+    {
+      label: modoOscuro ? "Modo Claro" : "Modo Oscuro",
+      icon: modoOscuro ? "pi pi-sun" : "pi pi-moon",
+      command: toggleModo,
+    },
+    {
+      icon: "pi pi-search",
+    },
+    {
+      icon: "pi pi-phone",
+    },
+    {
+      icon: "pi pi-bell",
+    },
+    {
+      icon: "pi pi-user",
+    },
+    {
+      label: "Menú",
+      icon: "pi pi-bars",
+    },
+  ];
+
+  const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="40" className="mr-2"></img>;
+
   return (
-    <>
-      <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="">
-            CityTour
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <Link to="/" className="nav-link">
-                Inicio
-              </Link>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
+    <div className="card">
+      <Menubar model={items} start={start} />
+    </div>
   );
 }
 
