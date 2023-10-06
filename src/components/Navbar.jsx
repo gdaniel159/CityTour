@@ -38,7 +38,7 @@ function Navbar() {
 
   return (
     <div className="card">
-      <Menubar model={items} start={start} />
+      <Menubar model={items} start={start} className="flex justify-content-between"/>
     </div>
   );
 }

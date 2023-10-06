@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
-import { Carousel } from "primereact/carousel";
-import { Image } from 'primereact/image';
+import { Galleria } from 'primereact/galleria';
+import { Image } from "primereact/image";
+import "../styles/carousel.css";
 
 export function CarouselComponent() {
-
   const items = [
     {
       src: "https://www.peru.travel/Contenido/General/Imagen/es/92/1.1/nor-yauyos-cochas.jpg",
@@ -25,14 +24,22 @@ export function CarouselComponent() {
   const itemTemplate = (item) => {
     return (
       <div className="carousel-item">
-        <Image src={item.src} alt={item.alt} width="100%" />
+        <Image src={item.src} alt={item.alt} className="carousel-image block" />
       </div>
     );
   };
 
   return (
-    <>
-      <Carousel value={items} itemTemplate={itemTemplate} />
-    </>
+    <div className="card">
+      <Galleria
+        value={items}
+        numVisible={5}
+        circular
+        showThumbnails={false}
+        // showItemNavigators
+        item={itemTemplate}
+        showIndicators
+      />
+    </div>
   );
 }
