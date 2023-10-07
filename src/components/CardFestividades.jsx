@@ -15,7 +15,7 @@ export function CardFestividades(props) {
     );
 
     const footer = (
-      <div className="flex flex-wrap justify-content-between align-items-center gap-2">
+      <div className="flex flex-wrap justify-content-between align-items-center gap-2 p-2 text-sm">
         <div className="destino">
           <i className="pi pi-map-marker"></i>
           <span> </span>
@@ -28,13 +28,14 @@ export function CardFestividades(props) {
     );
 
     return (
-      <div key={index} className="card flex justify-content-center">
+      <div key={index} className="card flex justify-content-center mt-3 mb-3">
         <Card
-          subTitle={card.title}
           footer={footer}
           header={header}
           style={{ width: "286px" }}
-        ></Card>
+        >
+          <div className="m-2">{card.title}</div>
+        </Card>
       </div>
     );
   });

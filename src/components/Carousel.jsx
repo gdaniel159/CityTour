@@ -5,17 +5,17 @@ import "../styles/carousel.css";
 export function CarouselComponent() {
   const items = [
     {
-      src: "https://www.peru.travel/Contenido/General/Imagen/es/92/1.1/nor-yauyos-cochas.jpg",
+      src: "https://res.cloudinary.com/weekendesk/images/s--LI1oG4hm--/c_fill,f_auto,g_auto,h_400,q_50,w_1920/nbc3b3pc2fdeekr5ij9l/naranjo-de-bulnes.jpg",
       alt: "Imagen 1",
       description: "Descripción de la imagen 1",
     },
     {
-      src: "https://www.machupicchuterra.com/wp-content/uploads/nevados-lima.jpg",
+      src: "https://res.cloudinary.com/weekendesk/images/s--LI1oG4hm--/c_fill,f_auto,g_auto,h_400,q_50,w_1920/nbc3b3pc2fdeekr5ij9l/naranjo-de-bulnes.jpg",
       alt: "Imagen 2",
       description: "Descripción de la imagen 2",
     },
     {
-      src: "https://www.machupicchuterra.com/wp-content/uploads/nevado-yerupaja.jpg",
+      src: "https://res.cloudinary.com/weekendesk/images/s--LI1oG4hm--/c_fill,f_auto,g_auto,h_400,q_50,w_1920/nbc3b3pc2fdeekr5ij9l/naranjo-de-bulnes.jpg",
       alt: "Imagen 2",
       description: "Descripción de la imagen 2",
     },

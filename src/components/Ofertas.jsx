@@ -36,14 +36,14 @@ export function OfertasComponent() {
 
   return (
     <>
-      <div className="enc1 flex align-items-center w-2 justify-content-center mb-3">
-        <i className="pi pi-ticket text-2xl"></i>
-        <h2 className="mr-3 ml-3">
-          <Link to="/ofertas" className="nav-link">
+      <div className="enc1 flex align-items-center w-2 justify-content-center mb-3 mt-3 mb-3">
+        <h2>
+          <i className="pi pi-ticket text-2xl color-oferta"></i>
+          <Link to="/ofertas" className="nav-link enlace color-oferta mr-3 ml-3">
             Ofertas
           </Link>
+          <i className="pi pi-arrow-circle-right text-2xl color-oferta"></i>
         </h2>
-        <i className="pi pi-arrow-circle-right text-2xl"></i>
       </div>
       <div className="p-grid flex flex-wrap justify-content-around align-items-center">
         {ofertas.map((oferta) => (
@@ -66,9 +66,19 @@ export function OfertasComponent() {
           </div>
         ))}
       </div>
-      <div className="flex banner-container mt-4">
-        <Image src="https://www.ytuqueplanes.com/imagenes//fotos/bannersOfertas/banner-oferta-Escapate-rutina.png" alt="Banner 1" width="95%" height="auto"/>
-        <Image src="https://www.ytuqueplanes.com/imagenes//fotos/bannersOfertas/banner-oferta-Disfruta-Loreto.png" alt="Banner 1" width="95%" height="auto"/>
+      <div className="flex banner-container mt-5 mb-5">
+        <Image
+          src="https://www.ytuqueplanes.com/imagenes//fotos/bannersOfertas/banner-oferta-Escapate-rutina.png"
+          alt="Banner 1"
+          width="95%"
+          height="auto"
+        />
+        <Image
+          src="https://www.ytuqueplanes.com/imagenes//fotos/bannersOfertas/banner-oferta-Disfruta-Loreto.png"
+          alt="Banner 1"
+          width="95%"
+          height="auto"
+        />
       </div>
     </>
   );
