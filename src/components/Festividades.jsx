@@ -35,7 +35,7 @@ export function FestividadesComponent() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#079647" }} className="p-4">
+      <div style={{ backgroundColor: "#079647" }} className="p-5">
         <div
           className="enc2 flex align-items-center justify-content-center mb-3 text-white"
           style={{ width: "20%" }}
@@ -49,7 +49,7 @@ export function FestividadesComponent() {
           <i className="pi pi-arrow-circle-right text-2xl"></i>
         </div>
 
-        <div className="flex justify-content-around">
+        <div className="flex flex-wrap justify-content-around">
           <CardFestividades cards={festividadesData} />
         </div>
       </div>

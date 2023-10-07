@@ -36,7 +36,7 @@ export function OfertasComponent() {
 
   return (
     <>
-      <div className="enc1 flex align-items-center w-2 justify-content-center mb-3 mt-3 mb-3">
+      <div className="enc1 flex align-items-center w-2 justify-content-center mb-3 mt-3 mb-3 ml-2">
         <h2>
           <i className="pi pi-ticket text-2xl color-oferta"></i>
           <Link to="/ofertas" className="nav-link enlace color-oferta mr-3 ml-3">
@@ -45,9 +45,9 @@ export function OfertasComponent() {
           <i className="pi pi-arrow-circle-right text-2xl color-oferta"></i>
         </h2>
       </div>
-      <div className="p-grid flex flex-wrap justify-content-around align-items-center">
+      <div className="p-grid flex flex-wrap justify-content-around align-items-center p-1">
         {ofertas.map((oferta) => (
-          <div key={oferta.id} className="p-col-12 p-md-4">
+          <div key={oferta.id} className="mb-2 mt-2">
             <div className="image-container">
               <Image
                 src={oferta.imagenUrl}
