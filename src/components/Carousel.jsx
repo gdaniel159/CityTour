@@ -36,9 +36,9 @@ export function CarouselComponent() {
         numVisible={5}
         circular
         showThumbnails={false}
-        // showItemNavigators
+        showItemNavigators
         item={itemTemplate}
-        showIndicators
+        // showIndicators
       />
     </div>
   );
