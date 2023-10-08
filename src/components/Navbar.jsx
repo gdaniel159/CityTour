@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Menubar } from "primereact/menubar";
-// import { Link } from "react-router-dom";
 
 function Navbar() {
-
   const [modoOscuro, setModoOscuro] = useState(false);
 
   const toggleModo = () => {
@@ -34,11 +32,24 @@ function Navbar() {
     },
   ];
 
-  const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="40" className="mr-2"></img>;
+  items.forEach(item => {
+    if (item.icon) {
+      item.className = "ml-3 mr-3";
+    }
+  });
+
+  const start = (
+    <img
+      alt="logo"
+      src="https://cdn-icons-png.flaticon.com/512/826/826070.png"
+      height="40"
+      className="mr-2"
+    />
+  );
 
   return (
-    <div className="card">
-      <Menubar model={items} start={start} />
+    <div className="p-mb-4">
+      <Menubar model={items} start={start} className="p-2 text-lg flex justify-content-between" />
     </div>
   );
 }
