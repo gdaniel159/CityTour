@@ -11,7 +11,6 @@ export function CardFestividades(props) {
         src={card.imageSrc}
         alt={`CardImage_${index}`}
         width="186"
-        preview
       />
     );
 

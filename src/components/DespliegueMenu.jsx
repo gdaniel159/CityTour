@@ -2,7 +2,7 @@ import "../styles/DespliegueM.css";
 
 export function DespliegueMenu() {
   return (
-    <div className="navlistab -activo-">
+    <div className="navlistab -activo-" style={{overflowY:"hidden"}}>
       <div className="headercontenedor">
         <div className="bloque -activo-" id="mprincipal">
           <div className="mDestinos">

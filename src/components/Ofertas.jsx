@@ -1,5 +1,6 @@
 import { Image } from "primereact/image";
 import { Link } from "react-router-dom";
+import img1 from "../assets/img/nevado.png";
 import "../styles/OfertasComponent.css";
 
 export function OfertasComponent() {
@@ -7,29 +8,25 @@ export function OfertasComponent() {
     {
       id: 1,
       titulo: "Oferta 1",
-      imagenUrl:
-        "https://www.ytuqueplanes.com/imagenes/Fotos/ofertas/oferta-p-ayacucho-ayacucho-magico.jpg",
+      imagenUrl: img1,
       precio: "$10.00",
     },
     {
       id: 2,
       titulo: "Oferta 2",
-      imagenUrl:
-        "https://www.ytuqueplanes.com/imagenes/Fotos/ofertas/oferta-p-moquegua-full-day-moquegua.jpg",
+      imagenUrl: img1,
       precio: "$10.00",
     },
     {
       id: 3,
       titulo: "Oferta 3",
-      imagenUrl:
-        "https://www.ytuqueplanes.com/imagenes/Fotos/ofertas/oferta-p-lima-canon-autisha-aventureros.jpg",
+      imagenUrl: img1,
       precio: "$10.00",
     },
     {
       id: 4,
       titulo: "Oferta 4",
-      imagenUrl:
-        "https://www.ytuqueplanes.com/imagenes/Fotos/ofertas/oferta-p-moquegua-full-day-moquegua.jpg",
+      imagenUrl: img1,
       precio: "$10.00",
     },
   ];
@@ -61,6 +58,14 @@ export function OfertasComponent() {
                 width="299"
                 height="450"
               />
+              <div className="overlay">
+                <p>Full day (Dia completo)</p>
+                <h4>Aventuras y adrenalina en el nevado</h4>
+              </div>
+              <div className="prices">
+                <p className="main-price">S/. 490</p>
+                <p className="before-price">Antes S/. 220</p>
+              </div>
             </div>
           </div>
         ))}

@@ -1,31 +1,37 @@
 .festividad-container {
-    
+  
 }
 
 .festividad-container img {
-    border-top-right-radius:20px;
-    border-top-left-radius:20px;
-    width: 100%;
-    /* height: 200px; */
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.festividad-container .p-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.6);
 }
 
 .festividad-container .card {
-    /* border: 1px solid #000; */
-    border-radius:20px;
-    flex: 0 0 calc(15% - 20px);
+  border-radius: 20px;
+  flex: 0 0 calc(15% - 20px);
 }
 
 .festividad-container .p-card {
-    border-radius:20px
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .cube {
-    display: flex;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    padding: 10px;
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
 }
