@@ -1,22 +1,46 @@
 .titleDes {
-    color: #0070ba;
+  color: #0070ba;
 }
 
 .titleDes a {
-    text-decoration: none;
-    color: #0070ba;
+  text-decoration: none;
+  color: #0070ba;
 }
 
 .cubeDs {
+  display: flex;
+  border: 2px solid #0070ba;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  color: #0070ba;
+}
 
-    display: flex;
-    border: 2px solid #0070ba;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    padding: 10px;
-    color: #0070ba;
+.image-container-ds {
+  position: relative;
+  overflow: hidden;
+}
 
+.imageOferta-ds {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.image-container-ds:hover .imageOferta-ds {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+.overlay-ds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: background-color 0.3s;
+  color: #fff;
 }
