@@ -2,6 +2,7 @@ import { Card } from "primereact/card";
 import { Image } from "primereact/image";
 import PropTypes from "prop-types";
 
+
 export function CardFestividades(props) {
   
   const cards = props.cards.map((card, index) => {

@@ -29,39 +29,38 @@ export function OfertasComponent() {
       id: 4,
       titulo: "Oferta 4",
       imagenUrl:
-        "https://www.ytuqueplanes.com/imagenes//fotos/ofertas/Pucallpa-encantadora_30032023_P.jpg",
+        "https://www.ytuqueplanes.com/imagenes/Fotos/ofertas/oferta-p-moquegua-full-day-moquegua.jpg",
       precio: "$10.00",
     },
   ];
 
   return (
     <>
-      <div className="enc1 flex align-items-center w-2 justify-content-center mb-3 mt-3 mb-3 ml-2">
-        <h2>
+      <div className="enc1 ml-4 mr-3 mt-3 w-3">
+        <h1 className="flex align-items-center">
           <i className="pi pi-ticket text-2xl color-oferta"></i>
-          <Link to="/ofertas" className="nav-link enlace color-oferta mr-3 ml-3">
+          <Link
+            to="/ofertas"
+            className="nav-link enlace color-oferta mr-3 ml-3"
+          >
             Ofertas
           </Link>
-          <i className="pi pi-arrow-circle-right text-2xl color-oferta"></i>
-        </h2>
+          <div className="cubeOf">
+            <i className="pi pi-arrow-right"></i>
+          </div>
+        </h1>
       </div>
-      <div className="p-grid flex flex-wrap justify-content-around align-items-center p-1">
+      <div className="flex justify-content-center align-items-center main-container">
         {ofertas.map((oferta) => (
-          <div key={oferta.id} className="mb-2 mt-2">
+          <div key={oferta.id} className="">
             <div className="image-container">
-              <Image
+              <img
                 src={oferta.imagenUrl}
                 alt={oferta.titulo}
-                className="carousel-image"
+                className="imageOferta"
                 width="299"
-                height="418"
+                height="450"
               />
-              <div className="overlay">
-                <div className="overlay-content">
-                  <p className="overlay-title">{oferta.titulo}</p>
-                  <p className="overlay-price">{oferta.precio}</p>
-                </div>
-              </div>
             </div>
           </div>
         ))}

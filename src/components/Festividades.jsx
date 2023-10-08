@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CardFestividades } from "./CardFestividades";
+import "../styles/festividades.css";
 
 export function FestividadesComponent() {
   const festividadesData = [
@@ -35,21 +36,20 @@ export function FestividadesComponent() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#079647" }} className="p-5">
-        <div
-          className="enc2 flex align-items-center justify-content-center mb-3 text-white"
-          style={{ width: "20%" }}
-        >
-          <i className="pi pi-ticket text-2xl"></i>
-          <h2 className="mr-3 ml-3">
-            <Link to="/festividades" className="nav-link text-white">
+      <div style={{ backgroundColor: "#079647" }} className="p-4">
+        <div className="enc2 flex align-items-center w-3 justify-content-center mb-2">
+          <h1 className="text-white flex align-items-center">
+            <i className="pi pi-ticket text-3xl"></i>
+            <Link to="/festividades" className="nav-link text-white ml-3 mr-3">
               Festividades
             </Link>
-          </h2>
-          <i className="pi pi-arrow-circle-right text-2xl"></i>
+            <div className="cube">
+              <i className="pi pi-arrow-right"></i>
+            </div>
+          </h1>
         </div>
 
-        <div className="flex flex-wrap justify-content-around">
+        <div className="flex flex-wrap justify-content-around festividad-container">
           <CardFestividades cards={festividadesData} />
         </div>
       </div>

@@ -1,0 +1,22 @@
+.titleDes {
+    color: #0070ba;
+}
+
+.titleDes a {
+    text-decoration: none;
+    color: #0070ba;
+}
+
+.cubeDs {
+
+    display: flex;
+    border: 2px solid #0070ba;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    color: #0070ba;
+
+}

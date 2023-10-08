@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { CarouselComponent } from "../components/Carousel";
 import { OfertasComponent } from "../components/Ofertas";
 import { FestividadesComponent } from "../components/Festividades";
+import { DestinosComponent } from "../components/Destinos";
 
 function Homepage() {
   return (
@@ -11,6 +12,7 @@ function Homepage() {
       <CarouselComponent />
       <OfertasComponent />
       <FestividadesComponent />
+      <DestinosComponent />
       <Footer />
     </div>
   );
