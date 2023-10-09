@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menubar } from "primereact/menubar";
-import { DespliegueMenu } from "./DespliegueMenu"; // Asegúrate de ajustar la ruta de importación según la ubicación de tu componente DespliegueMenu
+import { DespliegueMenu } from "./DespliegueMenu";
+import '../styles/navbar.css';
 
 function Navbar() {
   const [modoOscuro, setModoOscuro] = useState(false);
-  const [menuVisible, setMenuVisible] = useState(false); // Agregamos estado para controlar la visibilidad del menú
+  const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleModo = () => {
     setModoOscuro(!modoOscuro);
   };
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible); // Cambiar la visibilidad del menú al hacer clic en el icono del menú
+    setMenuVisible(!menuVisible); 
   };
 
   const items = [
@@ -35,7 +36,7 @@ function Navbar() {
     {
       label: "Menú",
       icon: "pi pi-bars",
-      command: toggleMenu, // Asignamos la función para mostrar/ocultar el menú al hacer clic en el icono del menú
+      command: toggleMenu,
     },
   ];
 
@@ -55,13 +56,14 @@ function Navbar() {
   );
 
   return (
-    <div className="p-mb-4" style={{position:"relative"}}>
+    <div className={`p-mb-4 ${menuVisible ? 'navbar-fixed' : ''}`}>
       <Menubar
         model={items}
         start={start}
-        className={`p-2 text-lg flex justify-content-between ${menuVisible ? 'active' : ''}`} // Agregamos una clase CSS 'active' cuando el menú está visible
+        className={`p-2 text-lg flex justify-content-between navbar ${menuVisible ? 'active' : ''}`}
       />
-      {menuVisible && <DespliegueMenu />} {/* Renderiza DespliegueMenu solo cuando el menú esté visible */}
+      {/* Renderiza DespliegueMenu solo cuando el menú esté visible */}
+      {menuVisible && <DespliegueMenu />} 
     </div>
   );
 }

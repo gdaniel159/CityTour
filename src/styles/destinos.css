@@ -19,18 +19,28 @@
   color: #0070ba;
 }
 
-.image-container-ds {
+.image-container-ds, .image-container-ds-r {
   position: relative;
   overflow: hidden;
 }
 
-.imageOferta-ds {
+.imageOferta-ds, .imageOferta-ds-r {
   transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.imageOferta-ds-r {
+  border-radius: 15px;
 }
 
 .image-container-ds:hover .imageOferta-ds {
   transform: scale(1.05);
   filter: brightness(0.9);
+}
+
+.image-container-ds-r:hover .imageOferta-ds-r {
+  transform: scale(1.05);
+  filter: brightness(0.6);
+  border-radius: 15px;
 }
 
 .overlay-ds {
@@ -43,4 +53,83 @@
   border-top-right-radius: 15px;
   transition: background-color 0.3s;
   color: #fff;
+}
+
+.overlay-ds-r {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+.overlay-ds-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+.cubeDsC {
+  display: flex;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.rutas {
+  border-radius: 10px;
+}
+
+.sec-2 {
+  background-color: #f5f6fa;
+  padding: 50px;
+}
+
+.sec-4 {
+  background-color: #5A5A5A;
+  padding: 10px;
+}
+
+.sec-4 p {
+  color: #A9A9A9;
+}
+
+.sec-2 .sub-sec-1, .sec-2 .sub-sec-2, .sec-2 .sub-sec-3 {
+  /* border: 1px solid #000; */
+  margin: 0 40px;
+  padding: 10px;
+}
+
+.sec-2 .sub-sec-1 ul, .sec-2 .sub-sec-2 ul, .sec-2 .sub-sec-3 ul {
+  list-style: none;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.sec-2 .sub-sec-1 ul li a, .sec-2 .sub-sec-2 ul li a, .sec-2 .sub-sec-3 ul li a{
+  color: #636363;
+  line-height:22px;
+
+}
+
+.avisos p{
+  margin: 0 15px;
+}
+
+.avisos p a{
+  color: #A9A9A9;
 }

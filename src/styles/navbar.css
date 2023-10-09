@@ -1,0 +1,35 @@
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.navbar {
+  /* background-color: #33aba0; */
+}
+
+.p-menubar {
+  border: none;
+  border-radius: 0;
+  
+}
+
+.p-menu-list:hover {
+    background-color: #000;
+}
+
+.p-menuitem-icon {
+    padding: 5px 10px;
+}
+
+.p-menuitem-text{
+    /* background-color: #000; */
+    padding: 10px;
+}
+
+.p-menuitem:hover{
+    background-color: transparent !important;
+}

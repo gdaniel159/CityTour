@@ -1,0 +1,59 @@
+.enterete {
+  background: #0070ba;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px;
+  width: 405px;
+  min-height: 145px;
+  height: 150px;
+}
+
+.conoce {
+  background: #801063;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px;
+  width: 405px;
+  min-height: 145px;
+  height: 150px;
+}
+
+.app {
+  background: #33aba0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px;
+  width: 405px;
+  min-height: 145px;
+  height: 150px;
+}
+
+.app-img {
+  display: flex;
+  column-gap: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.app-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cubeFt {
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  color: #fff;
+}

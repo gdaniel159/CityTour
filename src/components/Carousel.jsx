@@ -1,21 +1,24 @@
 import { Galleria } from 'primereact/galleria';
 import { Image } from "primereact/image";
 import "../styles/carousel.css";
+import img1 from '../assets/img/slide1.png';
+import img2 from '../assets/img/slide2.png';
+import img3 from '../assets/img/slide3.png';
 
 export function CarouselComponent() {
   const items = [
     {
-      src: "https://res.cloudinary.com/weekendesk/images/s--LI1oG4hm--/c_fill,f_auto,g_auto,h_400,q_50,w_1920/nbc3b3pc2fdeekr5ij9l/naranjo-de-bulnes.jpg",
+      src: img1,
       alt: "Imagen 1",
       description: "Descripción de la imagen 1",
     },
     {
-      src: "https://res.cloudinary.com/weekendesk/images/s--LI1oG4hm--/c_fill,f_auto,g_auto,h_400,q_50,w_1920/nbc3b3pc2fdeekr5ij9l/naranjo-de-bulnes.jpg",
+      src: img2,
       alt: "Imagen 2",
       description: "Descripción de la imagen 2",
     },
     {
-      src: "https://res.cloudinary.com/weekendesk/images/s--LI1oG4hm--/c_fill,f_auto,g_auto,h_400,q_50,w_1920/nbc3b3pc2fdeekr5ij9l/naranjo-de-bulnes.jpg",
+      src: img3,
       alt: "Imagen 2",
       description: "Descripción de la imagen 2",
     },

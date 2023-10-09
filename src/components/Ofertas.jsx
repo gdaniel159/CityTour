@@ -43,7 +43,7 @@ export function OfertasComponent() {
             Ofertas
           </Link>
           <div className="cubeOf">
-            <i className="pi pi-arrow-right"></i>
+            <i className="pi pi-chevron-right"></i>
           </div>
         </h1>
       </div>

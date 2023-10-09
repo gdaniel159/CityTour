@@ -36,7 +36,7 @@ export function FestividadesComponent() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#079647" }} className="p-4">
+      <div style={{ backgroundColor: "#079647" }} className="pt-6 pb-6 pl-4 pr-4">
         <div className="enc2 flex align-items-center w-3 justify-content-center mb-2">
           <h1 className="text-white flex align-items-center">
             <i className="pi pi-ticket text-3xl"></i>
@@ -44,7 +44,7 @@ export function FestividadesComponent() {
               Festividades
             </Link>
             <div className="cube">
-              <i className="pi pi-arrow-right"></i>
+              <i className="pi pi-chevron-right"></i>
             </div>
           </h1>
         </div>
