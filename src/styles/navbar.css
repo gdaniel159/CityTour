@@ -33,3 +33,12 @@
 .p-menuitem:hover{
     background-color: transparent !important;
 }
+
+.p-sidebar-header {
+  background-color: #ccc;
+  padding: 10px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/826/826070.png");
+  background-repeat: no-repeat;
+  background-position: start;
+  background-size: contain;
+}

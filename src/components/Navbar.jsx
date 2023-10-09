@@ -1,18 +1,22 @@
 import { useState } from "react";
 import { Menubar } from "primereact/menubar";
 import { DespliegueMenu } from "./DespliegueMenu";
-import '../styles/navbar.css';
+import { Sidebar } from "primereact/sidebar";
+import { AtencionComponent } from "./atencion";
+import "../styles/navbar.css";
 
 function Navbar() {
   const [modoOscuro, setModoOscuro] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
+  
+  const [visible, setVisible] = useState(false);
 
   const toggleModo = () => {
     setModoOscuro(!modoOscuro);
   };
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible); 
+    setMenuVisible(!menuVisible);
   };
 
   const items = [
@@ -44,6 +48,11 @@ function Navbar() {
     if (item.icon) {
       item.className = "ml-3 mr-3";
     }
+    if (item.icon === "pi pi-phone") {
+      item.command = () => {
+        setVisible(!visible);
+      };
+    }
   });
 
   const start = (
@@ -56,14 +65,23 @@ function Navbar() {
   );
 
   return (
-    <div className={`p-mb-4 ${menuVisible ? 'navbar-fixed' : ''}`}>
+    <div className={`p-mb-4 ${menuVisible ? "navbar-fixed" : ""}`}>
       <Menubar
         model={items}
         start={start}
-        className={`p-2 text-lg flex justify-content-between navbar ${menuVisible ? 'active' : ''}`}
+        className={`p-2 text-lg flex justify-content-between navbar ${
+          menuVisible ? "active" : ""
+        }`}
       />
       {/* Renderiza DespliegueMenu solo cuando el menú esté visible */}
-      {menuVisible && <DespliegueMenu />} 
+      {menuVisible && <DespliegueMenu />}
+      {visible && (
+        <div className="card flex justify-content-center">
+          <Sidebar visible={visible} onHide={() => setVisible(false)} fullScreen>
+            <AtencionComponent/>
+          </Sidebar>
+        </div>
+      )}
     </div>
   );
 }
