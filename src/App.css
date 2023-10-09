@@ -17,3 +17,7 @@
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1; /* Color del track */
 }
+
+.p-scrolltop {
+  background-color: #3498db;
+}

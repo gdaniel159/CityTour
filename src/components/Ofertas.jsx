@@ -1,6 +1,9 @@
 import { Image } from "primereact/image";
 import { Link } from "react-router-dom";
 import img1 from "../assets/img/nevado.png";
+import img2 from "../assets/img/nevado2.png";
+import img3 from "../assets/img/colores.png";
+import img4 from "../assets/img/oasis.png";
 import "../styles/OfertasComponent.css";
 
 export function OfertasComponent() {
@@ -14,19 +17,19 @@ export function OfertasComponent() {
     {
       id: 2,
       titulo: "Oferta 2",
-      imagenUrl: img1,
+      imagenUrl: img2,
       precio: "$10.00",
     },
     {
       id: 3,
       titulo: "Oferta 3",
-      imagenUrl: img1,
+      imagenUrl: img3,
       precio: "$10.00",
     },
     {
       id: 4,
       titulo: "Oferta 4",
-      imagenUrl: img1,
+      imagenUrl: img4,
       precio: "$10.00",
     },
   ];
@@ -55,8 +58,8 @@ export function OfertasComponent() {
                 src={oferta.imagenUrl}
                 alt={oferta.titulo}
                 className="imageOferta"
-                width="299"
-                height="450"
+                width="281"
+                height="418"
               />
               <div className="overlay">
                 <p>Full day (Dia completo)</p>

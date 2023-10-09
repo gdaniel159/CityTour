@@ -5,7 +5,7 @@
 .image-container {
   margin: 20px;
   border-radius:20px;
-  height: 450px;
+  height: 418px;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -15,6 +15,7 @@
   width: 100%;
   /* height: auto; */
   border-radius:20px;
+  filter: brightness(0.6);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -27,7 +28,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(62, 60, 60, 0);
   padding: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
