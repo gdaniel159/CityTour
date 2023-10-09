@@ -17,7 +17,7 @@ function Footer() {
         </div>
         <div className="conoce">
           <p>Conviértete en</p>
-          <p>Socio “Y tú qué planes”</p>
+          <p>Socio “CityTour”</p>
           <Button
             label="Conoce más"
             severity="warning"
