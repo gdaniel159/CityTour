@@ -3,13 +3,15 @@ import { Menubar } from "primereact/menubar";
 import { DespliegueMenu } from "./DespliegueMenu";
 import { Sidebar } from "primereact/sidebar";
 import { AtencionComponent } from "./atencion";
+import { UserFormComponent } from "./UserForm";
 import "../styles/navbar.css";
 
 function Navbar() {
   const [modoOscuro, setModoOscuro] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  
+
   const [visible, setVisible] = useState(false);
+  const [visibleForm, setVisibleForm] = useState(false);
 
   const toggleModo = () => {
     setModoOscuro(!modoOscuro);
@@ -53,6 +55,11 @@ function Navbar() {
         setVisible(!visible);
       };
     }
+    if (item.icon === "pi pi-user") {
+      item.command = () => {
+        setVisibleForm(!visible);
+      };
+    }
   });
 
   const start = (
@@ -77,8 +84,23 @@ function Navbar() {
       {menuVisible && <DespliegueMenu />}
       {visible && (
         <div className="card flex justify-content-center">
-          <Sidebar visible={visible} onHide={() => setVisible(false)} fullScreen>
-            <AtencionComponent/>
+          <Sidebar
+            visible={visible}
+            onHide={() => setVisible(false)}
+            fullScreen
+          >
+            <AtencionComponent />
+          </Sidebar>
+        </div>
+      )}
+      {visibleForm && (
+        <div className="card">
+          <Sidebar
+            visible={visibleForm}
+            onHide={() => setVisibleForm(false)}
+            fullScreen
+          >
+            <UserFormComponent/>
           </Sidebar>
         </div>
       )}
