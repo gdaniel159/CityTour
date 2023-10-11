@@ -1,0 +1,24 @@
+input {
+    padding: 8px;
+}
+
+.facebook {
+    background-color:#3B5998;
+    color: #fff;
+    padding:10px;
+    border-radius:6px;
+    font-weight: normal;
+}
+
+.google {
+    background-color: transparent;
+    border: 0.5px solid rgb(99,99,99,0.5);
+    padding: 10px;
+    border-radius:6px;
+    font-weight: normal;
+}
+
+.btnLogin, .btnRegister {
+    width: 100%;
+    padding: 10px;
+}
