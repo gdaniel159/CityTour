@@ -35,10 +35,11 @@
 }
 
 .p-sidebar-header {
-  background-color: #ccc;
-  padding: 10px;
+  background-color: #f8f9fa;
+  padding: 25px;
   background-image: url("https://cdn-icons-png.flaticon.com/512/826/826070.png");
   background-repeat: no-repeat;
-  background-position: start;
-  background-size: contain;
+  background-position: left center;
+  background-size: 41px;
+  margin-left: 10px; 
 }
