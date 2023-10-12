@@ -1,15 +1,16 @@
 import "../styles/DespliegueM.css";
 import { MapaComponent } from "./Mapa";
+import { Link } from "react-router-dom";
 
 export function DespliegueMenu() {
   return (
-    <div className="navlistab -activo-" style={{overflowY:"hidden"}}>
+    <div className="navlistab -activo-" style={{ overflowY: "hidden" }}>
       <div className="headercontenedor">
         <div className="bloque -activo-" id="mprincipal" style={{}}>
           <div className="mDestinos">
-            <div className="mapa-destinos p-4" style={{border:"1px solid #000"}}>
+            <div className="mapa-destinos p-4">
               <span className="mapa-menu">
-                <MapaComponent/>
+                <MapaComponent />
               </span>
             </div>
             <div className="departamentos-destinos">
@@ -17,7 +18,12 @@ export function DespliegueMenu() {
                 <h2>
                   <span>{/* <img src="#" alt="Alternate Text"> */}</span>
                   <span>
-                    Destinos
+                    <Link
+                      to="/destinos"
+                      className="nav-link text-white"
+                    >
+                      Destinos
+                    </Link>
                     {/* <img src="#" alt="Destinos"> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +124,7 @@ export function DespliegueMenu() {
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="lima" href="#" >
+                  <a data-filtro="lima" href="#">
                     Lima
                   </a>
                 </li>

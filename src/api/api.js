@@ -27,7 +27,7 @@ export const getPaquetes = () => {
 };
 
 export const getRegiones = () => {
-  return cityAPI.get("/region/get");
+  return cityAPI.get("/regiones/get");
 };
 
 export const getUsuarios = () => {
@@ -71,6 +71,12 @@ export const storeUsuario = (newUsuario) => {
 export const storeRegistroPaquete = (newRegistroPaquete) => {
   return cityAPI.post("registro_paquete/create", newRegistroPaquete);
 };
+
+// == LOGIN == //
+
+export const login = (userData) => {
+  return cityAPI.post("login",userData);
+} 
 
 // === UPDATE === //
 // === DELETE === //

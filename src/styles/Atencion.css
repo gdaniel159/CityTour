@@ -1,0 +1,20 @@
+.contact-container {
+  background-color: #33ABA0;
+  /* border: 1px solid #000; */
+  padding: 20px;
+  width: 50%;
+  color: #fff;
+}
+
+.title-contact {
+  font-size:48px;
+}
+
+.container-form {
+  padding:20px;
+  /* border: 1px solid #000; */
+}
+
+.call-info-container{
+  border: 1px solid #000; 
+}
