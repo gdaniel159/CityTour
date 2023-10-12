@@ -23,7 +23,12 @@ export function AtencionComponent() {
               <InputText id="correo" />
             </div>
             <div className="card flex justify-content-center mb-2">
-              <InputTextarea autoResize rows={5} cols={30} className="w-full p-2"/>
+              <InputTextarea
+                autoResize
+                rows={5}
+                cols={30}
+                className="w-full p-2"
+              />
             </div>
           </div>
           <div className="card flex justify-content-center">
@@ -35,38 +40,38 @@ export function AtencionComponent() {
         <div className="call-info-container">
           <div className="">
             {/* 1 */}
-            <div className="">
-              <div className="">
-                <span className="">
-                  <img src={img1} alt="" />
+            <div className="info-cont">
+              <div className="flex align-items-center">
+                <span className="mr-2">
+                  <img src={img1} alt="" width="40" height="40" />
                 </span>
-                <h5 className="">LLAMANOS</h5>
-                <p className=""> (01) 574 8000</p>
+                <h5 className="text-3xl">LLAMANOS</h5>
               </div>
+              <p className="mt-2"> (01) 574 8000</p>
             </div>
 
             {/* 2 */}
-            <div className="">
-              <div className="">
-                <span className="">
-                  <img src={img2} alt="" />
+            <div className="info-cont">
+              <div className="flex align-items-center">
+                <span className="mr-2">
+                  <img src={img2} alt="" width="40" height="40" />
                 </span>
-                <h5 className="">NUESTRO EMAIL</h5>
-                <p className=""> Example@gmail.com</p>
+                <h5 className="text-3xl">NUESTRO EMAIL</h5>
               </div>
+              <p className="mt-2"> Example@gmail.com</p>
             </div>
 
             {/* 3 */}
-            <div className="">
-              <div className="">
-                <span className="">
-                  <img src={img2} alt="" />
+            <div className="info-cont">
+              <div className="flex align-items-center">
+                <span className="mr-2">
+                  <img src={img2} alt="" width="40" height="40"/>
                 </span>
-                <h5 className="">UN ASESOR TE AYUDARA</h5>
-                <p className="">
-                  Atenderemos todos los días de 08:00 a.m. a 05:00 p.m.
-                </p>
+                <h5 className="text-3xl">UN ASESOR TE AYUDARA</h5>
               </div>
+              <p className="mt-2">
+                Atenderemos todos los días de 08:00 a.m. a 05:00 p.m.
+              </p>
             </div>
           </div>
         </div>
