@@ -63,12 +63,14 @@ function Navbar() {
   });
 
   const start = (
-    <img
-      alt="logo"
-      src="https://cdn-icons-png.flaticon.com/512/826/826070.png"
-      height="40"
-      className="mr-2"
-    />
+    <a href="/">
+      <img
+        alt="logo"
+        src="https://cdn-icons-png.flaticon.com/512/826/826070.png"
+        height="40"
+        className="mr-2"
+      />
+    </a>
   );
 
   return (
@@ -100,7 +102,7 @@ function Navbar() {
             onHide={() => setVisibleForm(false)}
             fullScreen
           >
-            <UserFormComponent/>
+            <UserFormComponent />
           </Sidebar>
         </div>
       )}

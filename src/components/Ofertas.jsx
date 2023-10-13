@@ -1,38 +1,21 @@
 import { Image } from "primereact/image";
 import { Link } from "react-router-dom";
-import img1 from "../assets/img/nevado.png";
-import img2 from "../assets/img/nevado2.png";
-import img3 from "../assets/img/colores.png";
-import img4 from "../assets/img/oasis.png";
+import { useState, useEffect } from "react";
+import { getPaquetes } from "../api/api";
 import "../styles/OfertasComponent.css";
 
 export function OfertasComponent() {
-  const ofertas = [
-    {
-      id: 1,
-      titulo: "Oferta 1",
-      imagenUrl: img1,
-      precio: "$10.00",
-    },
-    {
-      id: 2,
-      titulo: "Oferta 2",
-      imagenUrl: img2,
-      precio: "$10.00",
-    },
-    {
-      id: 3,
-      titulo: "Oferta 3",
-      imagenUrl: img3,
-      precio: "$10.00",
-    },
-    {
-      id: 4,
-      titulo: "Oferta 4",
-      imagenUrl: img4,
-      precio: "$10.00",
-    },
-  ];
+  const [paquetes, setPaquetes] = useState([]);
+
+  // Ofertas
+
+  useEffect(() => {
+    async function loadPaquetes() {
+      const res = await getPaquetes();
+      setPaquetes(res.data);
+    }
+    loadPaquetes();
+  }, []);
 
   return (
     <>
@@ -51,22 +34,22 @@ export function OfertasComponent() {
         </h1>
       </div>
       <div className="flex justify-content-center align-items-center main-container">
-        {ofertas.map((oferta) => (
-          <div key={oferta.id} className="">
+        {paquetes.map((paquete) => (
+          <div key={paquete.id} className="">
             <div className="image-container">
               <img
-                src={oferta.imagenUrl}
-                alt={oferta.titulo}
+                src={`http://127.0.0.1:8000/${paquete.destino.imageUrl}`}
+                alt={paquete.titulo}
                 className="imageOferta"
                 width="281"
                 height="418"
               />
               <div className="overlay">
-                <p>Full day (Dia completo)</p>
-                <h4>Aventuras y adrenalina en el nevado</h4>
+                <p>{paquete.duracion}</p>
+                <h4>{paquete.destino.nombre}</h4>
               </div>
               <div className="prices">
-                <p className="main-price">S/. 490</p>
+                <p className="main-price">S/. {paquete.precio}</p>
                 <p className="before-price">Antes S/. 220</p>
               </div>
             </div>

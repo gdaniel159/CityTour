@@ -26,6 +26,10 @@ export const getPaquetes = () => {
   return cityAPI.get("/paquete/get");
 };
 
+export const getPaquete = (idDestino) => {
+  return cityAPI.get(`/paquete/get/${idDestino}`);
+}
+
 export const getRegiones = () => {
   return cityAPI.get("/regiones/get");
 };

@@ -1,0 +1,43 @@
+.main-container-oferta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-user{
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    background-color: #0070BA;
+    padding: 30px;
+    color: #fff;
+}
+
+.social-contact {
+    padding: 40px;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    min-height:300px;
+}
+
+.whatsapp {
+    background-color: #77b822;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 235px;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    padding: 10px;
+}
+
+.facebook-c{
+    background-color: #0070BA;
+    color: #fff;
+    border-radius: 8px;
+    width: 235px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

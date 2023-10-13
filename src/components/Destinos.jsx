@@ -3,6 +3,7 @@ import { DescubreComponent } from "./Descubre";
 import "../styles/destinos.css";
 
 export function DestinosComponent() {
+
   return (
     <>
       <div className="enc2 flex align-items-center w-6 mb-2">

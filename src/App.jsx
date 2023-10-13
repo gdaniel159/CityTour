@@ -5,6 +5,7 @@ import { Ofertas } from './pages/OfertasPage';
 import { FestividadesPage } from './pages/FestividadesPage';
 import { Destinos } from './pages/DestinosPage';
 import { AdminSite } from './pages/AdminPage';
+import { OfertaFormComponent } from './pages/OfertaForm';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/festividades" element={<FestividadesPage />} />
         <Route path="/destinos" element={<Destinos />} />
         <Route path="/admin" element={<AdminSite/>} />
+        <Route path="/ofertas/:id" element={<OfertaFormComponent />} />
       </Routes>
     </BrowserRouter>
   );

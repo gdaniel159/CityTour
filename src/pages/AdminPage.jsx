@@ -2,11 +2,20 @@ import { useState, useEffect } from "react";
 import LogoutButtonComponent from "../components/LogOutButton";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-import { getDestinos, getRegiones, getUsuarios, getPaquetes, getRegistroPaquetes, getClientes } from "../api/api";
+import { OverlayPanel } from "primereact/overlaypanel";
+import { Button } from "primereact/button";
+
+import {
+  getDestinos,
+  getRegiones,
+  getUsuarios,
+  getPaquetes,
+  getRegistroPaquetes,
+  getClientes,
+} from "../api/api";
 import "../styles/admin.css";
 
 export function AdminSite() {
-
   const [destinos, setDestinos] = useState([]);
   const [regiones, setRegiones] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
@@ -14,7 +23,18 @@ export function AdminSite() {
   const [registroPaquete, setRegistroPaquete] = useState([]);
   const [clientes, setClientes] = useState([]);
 
-  // Destinos 
+  const opRefs = {};
+  const opRefsD = {}
+
+  const handleButtonClick = (e, id) => {
+    opRefs[id].toggle(e);
+  };
+
+  const handleButtonClickOvD = (e, id) => {
+    opRefsD[id].toggle(e);
+  }
+
+  // Destinos
 
   useEffect(() => {
     async function loadDestinos() {
@@ -42,7 +62,7 @@ export function AdminSite() {
       setUsuarios(res.data);
     }
     loadUsuarios();
-  },[]);
+  }, []);
 
   // Paquete
 
@@ -52,7 +72,7 @@ export function AdminSite() {
       setPaquetes(res.data);
     }
     loadPaquetes();
-  },[]);
+  }, []);
 
   // Detalle Paquete
 
@@ -62,7 +82,7 @@ export function AdminSite() {
       setRegistroPaquete(res.data);
     }
     loadRegistroPaquete();
-  },[]);
+  }, []);
 
   // Clientes
 
@@ -72,7 +92,7 @@ export function AdminSite() {
       setClientes(res.data);
     }
     loadClientes();
-  },[]);
+  }, []);
 
   return (
     <>
@@ -91,7 +111,30 @@ export function AdminSite() {
           <DataTable value={destinos} tableStyle={{ minWidth: "50rem" }}>
             <Column field="id" header="Code"></Column>
             <Column field="nombre" header="Nombre"></Column>
-            <Column field="estado" header="Estado"></Column>
+            <Column
+              field="id"
+              header="Imagen"
+              body={(rowDataD) => (
+                <div>
+                  <Button
+                    type="button"
+                    icon="pi pi-image"
+                    label="Image"
+                    onClick={(e) => handleButtonClickOvD(e, rowDataD.id)} // Use the id as the identifier
+                    className="p-2"
+                  />
+                  <OverlayPanel ref={(el) => (opRefsD[rowDataD.id] = el)}>
+                    <img
+                      src={`http://127.0.0.1:8000/${rowDataD.imageUrl}`}
+                      alt={rowDataD.nombre}
+                      className="small-image"
+                      width="360"
+                      height="280"
+                    ></img>
+                  </OverlayPanel>
+                </div>
+              )}
+            ></Column>
             <Column field="regiones.nombre" header="Región"></Column>
           </DataTable>
         </div>
@@ -110,7 +153,28 @@ export function AdminSite() {
           <DataTable value={regiones} tableStyle={{ minWidth: "50rem" }}>
             <Column field="id" header="Code"></Column>
             <Column field="nombre" header="Nombre"></Column>
-            <Column field="estado" header="Estado"></Column>
+            <Column
+              field="id"
+              header="Imagen"
+              body={(rowData) => (
+                <div>
+                  <Button
+                    type="button"
+                    icon="pi pi-image"
+                    label="Image"
+                    onClick={(e) => handleButtonClick(e, rowData.id)} // Use the id as the identifier
+                    className="p-2"
+                  />
+                  <OverlayPanel ref={(el) => (opRefs[rowData.id] = el)}>
+                    <img
+                      src={`http://127.0.0.1:8000/${rowData.imageUrl}`}
+                      alt={rowData.nombre}
+                      className="small-image"
+                    ></img>
+                  </OverlayPanel>
+                </div>
+              )}
+            ></Column>
           </DataTable>
         </div>
         <div className="registro-paquete-table">
@@ -120,8 +184,14 @@ export function AdminSite() {
             <Column field="cliente.nombre" header="Nombre"></Column>
             <Column field="cliente.correo" header="Correo"></Column>
             <Column field="cliente.mensaje" header="Mensaje"></Column>
-            <Column field="detalle_paquete.paquete.descripcion" header="Descripcion"></Column>
-            <Column field="detalle_paquete.paquete.precio" header="Precio"></Column>
+            <Column
+              field="detalle_paquete.paquete.descripcion"
+              header="Descripcion"
+            ></Column>
+            <Column
+              field="detalle_paquete.paquete.precio"
+              header="Precio"
+            ></Column>
           </DataTable>
         </div>
         <div className="registro-paquete-table">
