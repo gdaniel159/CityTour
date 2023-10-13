@@ -1,3 +1,5 @@
+// import "../assets/js/DespliegueMenu";
+import "../styles/DespliegueM.css"
 export function MapaComponent() {
   return (
     <>
@@ -8,7 +10,7 @@ export function MapaComponent() {
         // xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         // xmlns:svg="http://www.w3.org/2000/svg"
         // xmlns="http://www.w3.org/2000/svg"
-        // mapsvg:geoViewBox="-81.390559 -0.036136 -68.672457 -18.388935"
+        mapsvg:geoViewBox="-81.390559 -0.036136 -68.672457 -18.388935"
         version="1.1"
         id="peru"
         x="0"

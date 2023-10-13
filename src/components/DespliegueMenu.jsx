@@ -1,16 +1,19 @@
+import React, { useState } from "react";
 import "../styles/DespliegueM.css";
 import { MapaComponent } from "./Mapa";
+// import "../assets/js/DespliegueMenu";
 import { Link } from "react-router-dom";
 
 export function DespliegueMenu() {
+  
   return (
     <div className="navlistab -activo-" style={{ overflowY: "hidden" }}>
       <div className="headercontenedor">
         <div className="bloque -activo-" id="mprincipal" style={{}}>
           <div className="mDestinos">
-            <div className="mapa-destinos p-4">
+            <div className="mapa-destinos">
               <span className="mapa-menu">
-                <MapaComponent />
+                <MapaComponent/>
               </span>
             </div>
             <div className="departamentos-destinos">
@@ -18,10 +21,7 @@ export function DespliegueMenu() {
                 <h2>
                   <span>{/* <img src="#" alt="Alternate Text"> */}</span>
                   <span>
-                    <Link
-                      to="/destinos"
-                      className="nav-link text-white"
-                    >
+                    <Link to="/destinos" className="nav-link text-white">
                       Destinos
                     </Link>
                     {/* <img src="#" alt="Destinos"> */}
@@ -54,127 +54,127 @@ export function DespliegueMenu() {
               </a>
               <ul>
                 <li>
-                  <a data-filtro="amazonas" href="#">
+                  <a data-filtro="amazonas" href="#" className="departamento">
                     Amazonas
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="ancash" href="#">
+                  <a data-filtro="ancash" href="#" className="departamento">
                     Áncash
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="apurimac" href="#">
+                  <a data-filtro="apurimac" href="#" className="departamento">
                     Apurímac
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="arequipa" href="#">
+                  <a data-filtro="arequipa" href="#" className="departamento">
                     Arequipa
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="ayacucho" href="#">
+                  <a data-filtro="ayacucho" href="#" className="departamento">
                     Ayacucho
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="cajamarca" href="#">
+                  <a data-filtro="cajamarca" href="#" className="departamento">
                     Cajamarca
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="callao" href="#">
+                  <a data-filtro="callao" href="#" className="departamento">
                     Callao
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="cusco" href="#">
+                  <a data-filtro="cusco" href="#" className="departamento">
                     Cusco
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="huancavelica" href="#">
+                  <a data-filtro="huancavelica" href="#" className="departamento">
                     Huancavelica
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="huanuco" href="#">
+                  <a data-filtro="huanuco" href="#" className="departamento">
                     Huánuco
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="ica" href="#">
+                  <a data-filtro="ica" href="#" className="departamento">
                     Ica
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="junin" href="#">
+                  <a data-filtro="junin" href="#" className="departamento">
                     Junín
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="lalibertad" href="#">
+                  <a data-filtro="lalibertad" href="#" className="departamento">
                     La Libertad
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="lambayeque" href="#">
+                  <a data-filtro="lambayeque" href="#" className="departamento">
                     Lambayeque
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="lima" href="#">
+                  <a data-filtro="lima" href="#" className="departamento">
                     Lima
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="loreto" href="#">
+                  <a data-filtro="loreto" href="#" className="departamento">
                     Loreto
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="madredios" href="#">
+                  <a data-filtro="madredios" href="#" className="departamento">
                     Madre de Dios
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="moquegua" href="#">
+                  <a data-filtro="moquegua" href="#" className="departamento">
                     Moquegua
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="pasco" href="#">
+                  <a data-filtro="pasco" href="#" className="departamento">
                     Pasco
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="piura" href="#">
+                  <a data-filtro="piura" href="#"className="departamento">
                     Piura
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="puno" href="#">
+                  <a data-filtro="puno" href="#" className="departamento">
                     Puno
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="sanmartin" href="#">
+                  <a data-filtro="sanmartin" href="#" className="departamento">
                     San Martín
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="tacna" href="#">
+                  <a data-filtro="tacna" href="#" className="departamento">
                     Tacna
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="tumbes" href="#">
+                  <a data-filtro="tumbes" href="#" className="departamento">
                     Tumbes
                   </a>
                 </li>
                 <li>
-                  <a data-filtro="ucayali" href="#">
+                  <a data-filtro="ucayali" href="#" className="departamento">
                     Ucayali
                   </a>
                 </li>

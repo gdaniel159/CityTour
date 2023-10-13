@@ -121,6 +121,73 @@ a {
     display: none;
 }
 
+/* Estilos comunes para todos los elementos en estado de hover */
+.departamento:hover,
+.amazonas:hover,
+.ancash:hover,
+.apurimac:hover,
+.arequipa:hover,
+.ayacucho:hover,
+.cajarmarca:hover,
+.callao:hover,
+.cusco:hover,
+.huanuco:hover,
+.huancavelica:hover,
+.ica:hover,
+.junin:hover,
+.lalibertad:hover,
+.lambayeque:hover,
+.lima:hover,
+.metropolitanalima:hover,
+.loreto:hover,
+.madredios:hover,
+.moquegua:hover,
+.pasco:hover,
+.piura:hover,
+.puno:hover,
+.sanmartin:hover,
+.tacna:hover,
+.tumbes:hover,
+.ucayali:hover,
+.titicaca:hover {
+    cursor: pointer;
+}
+
+.departamento:hover {
+    color: #fff34e !important;
+}
+
+.amazonas:hover,
+.ancash:hover,
+.apurimac:hover,
+.arequipa:hover,
+.ayacucho:hover,
+.cajarmarca:hover,
+.callao:hover,
+.cusco:hover,
+.huanuco:hover,
+.huancavelica:hover,
+.ica:hover,
+.junin:hover,
+.lalibertad:hover,
+.lambayeque:hover,
+.lima:hover,
+.metropolitanalima:hover,
+.loreto:hover,
+.madredios:hover,
+.moquegua:hover,
+.pasco:hover,
+.piura:hover,
+.puno:hover,
+.sanmartin:hover,
+.tacna:hover,
+.tumbes:hover,
+.ucayali:hover,
+.titicaca:hover {
+    fill: #fff;
+}
+
+
 .navlistab #mprincipal .mDestinos .departamentos-destinos ul {
     -webkit-columns: 5;
     -moz-columns: 5;
